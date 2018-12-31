@@ -63,7 +63,7 @@ class MQTTClient(multiprocessing.Process):
         if task['timestamp'] <= time.time() + self.message_timeout:
             topic = "%s/%s/%s" % (self.mqttDataPrefix, task['deviceId'], task['param'])
             try:
-                if task['payload'] is not None and task['param'] != "tone_control":
+                if task['payload'] is not None and task['param'] != "tone_control" and task['param'] != "actual_volume":
                     self._mqttConn.publish(topic, payload=task['payload'])
                     self.logger.debug('Sending:%s' % (task))
             except Exception as e:
