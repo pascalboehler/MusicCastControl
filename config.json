@@ -4,7 +4,7 @@
     "mqtt_message_timeout": 60,
     "mqtt_prefix": "MusicCast",
     "mc_devices": {
-        "Radio": { "ip": "192.168.178.24", "zone": "zone2" },
+        "Radio": { "ip": "192.168.178.24", "zone": "main" }
     },
     "mc_notification_port": 5005,
     "mc_status_update_interval": 300
