@@ -2,11 +2,11 @@
 # docker run -d --restart unless-stopped --net=host --name MusicCastControl-container MusicCastControl
 
 FROM python:3
-MAINTAINER Keith Berry "keithwberry@gmail.com"
+MAINTAINER Pascal Böhler "pascal.boehler@hotmail.de"
 
 WORKDIR /usr/src/app
 
-ADD https://github.com/berryk/MusicCastControl/archive/master.tar.gz .
+ADD https://github.com/pascalboehler/MusicCastControl/archive/master.tar.gz .
 RUN gunzip -c master.tar.gz | tar xvf -
 
 WORKDIR /usr/src/app/MusicCastControl-master
